@@ -1,5 +1,5 @@
 from django.core.urlresolvers import reverse_lazy
-from django.views.generic import FormView, ListView
+from django.views.generic import FormView, ListView, DetailView
 from courses.forms import CourseForm
 from courses.models import Course
 
@@ -17,3 +17,7 @@ class CourseAddChangeView(FormView):
 class CourseListView(ListView):
     model = Course
     template_name = "course_list.html"
+
+class CourseDetailView(DetailView):
+    model = Course
+    template_name = "course_detail.html"

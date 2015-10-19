@@ -11,7 +11,7 @@
         {% for object in object_list %}
             <tr>
                 <td>{{ object.id }}</td>
-                <td>{{ object.title }}</td>
+                <td><a href="{% url "detail" object.id %}">{{ object.title }}</a></td>
                 <td>{{ object.description }}</td>
                 <td>{{ object.duration }} Weeks</td>
             </tr>

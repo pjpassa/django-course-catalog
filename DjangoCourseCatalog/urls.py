@@ -4,7 +4,7 @@ from django.contrib import admin
 from DjangoCourseCatalog import settings
 from courses import views
 
-urlpatterns = [
+urlpatterns = patterns(
     url(r'^admin/',
         include(admin.site.urls),
         name="admin"),
@@ -13,6 +13,8 @@ urlpatterns = [
         name="add"),
     url(r'^courses$',
         views.CourseListView.as_view(),
-        name="add"),
-    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-]
+        name="list"),
+    url(r'^courses/(?P<pk>\d+)$',
+        views.CourseDetailView.as_view(),
+        name="detail"),
+    ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
