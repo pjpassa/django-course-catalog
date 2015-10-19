@@ -17,4 +17,7 @@ urlpatterns = patterns(
     url(r'^courses/(?P<pk>\d+)$',
         views.CourseDetailView.as_view(),
         name="detail"),
+    url(r'^courses/(?P<pk>\d+)/change$',
+        views.CourseAddChangeView.as_view(),
+        name="change"),
     ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

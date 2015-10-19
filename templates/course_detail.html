@@ -2,6 +2,7 @@
 
 {% block body %}
     <h2>{{ object.title }}</h2>
+    <a href="{% url "change" object.id %}"><button>Change</button></a>
     <p>{{ object.description }}</p>
     <p>Instructor: {{ object.instructor }}</p>
     <p>Length: {{ object.duration }} weeks</p>

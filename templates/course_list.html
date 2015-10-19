@@ -12,7 +12,7 @@
             <tr>
                 <td>{{ object.id }}</td>
                 <td><a href="{% url "detail" object.id %}">{{ object.title }}</a></td>
-                <td>{{ object.description }}</td>
+                <td>{{ object.instructor }}</td>
                 <td>{{ object.duration }} Weeks</td>
             </tr>
         {% endfor %}
