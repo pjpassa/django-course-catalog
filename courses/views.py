@@ -1,6 +1,7 @@
 from django.core.urlresolvers import reverse_lazy
-from django.views.generic import FormView
+from django.views.generic import FormView, ListView
 from courses.forms import CourseForm
+from courses.models import Course
 
 
 class CourseAddChangeView(FormView):
@@ -11,3 +12,8 @@ class CourseAddChangeView(FormView):
     def form_valid(self, form):
         form.save()
         return super().form_valid(form)
+
+
+class CourseListView(ListView):
+    model = Course
+    template_name = "course_list.html"

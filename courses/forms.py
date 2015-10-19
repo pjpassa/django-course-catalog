@@ -6,4 +6,3 @@ class CourseForm(ModelForm):
     class Meta:
         model = Course
         exclude = ()
-

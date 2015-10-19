@@ -4,11 +4,15 @@ from django.contrib import admin
 from DjangoCourseCatalog import settings
 from courses import views
 
-urlpatterns = patterns([
+urlpatterns = [
     url(r'^admin/',
         include(admin.site.urls),
         name="admin"),
     url(r'^courses/add$',
         views.CourseAddChangeView.as_view(),
         name="add"),
-    ]) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'^courses$',
+        views.CourseListView.as_view(),
+        name="add"),
+    static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+]
