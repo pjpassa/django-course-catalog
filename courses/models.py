@@ -6,7 +6,7 @@ class Course(models.Model):
     description = models.TextField()
     instructor = models.CharField(max_length=100)
     duration = models.IntegerField(choices=[(2, "2 Weeks"), (8, "8 Weeks")])
-    courseArt = models.ImageField()
+    courseArt = models.ImageField(upload_to="course_art", max_length=100)
 
     def __str__(self):
         return "{}: {}".format(self.title, self.instructor)
