@@ -22,7 +22,7 @@ class CourseAddChangeView(FormView):
             if self.request.method == "GET" and pk:
                 return self.get_form_class()(instance=course)
             elif self.request.method == "POST" and pk:
-                return self.get_form_class()(self.request.POST, instance=course)
+                return self.get_form_class()(self.request.POST, self.request.FILES, instance=course)
         return super().get_form(form_class)
 
 class CourseListView(ListView):

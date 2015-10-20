@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 
 {% block body %}
-    <h2>{{ object.title }}</h2>
+    <h1>{{ object.title }}</h1>
+    <br/>
     <a href="{% url "change" object.id %}"><button>Change</button></a>
-    <p>{{ object.description }}</p>
-    <p>Instructor: {{ object.instructor }}</p>
-    <p>Length: {{ object.duration }} weeks</p>
+    <br/>
+    <h3>Description:</h3>
+    <p class="description">{{ object.description }}</p>
+    <p><strong>Instructor</strong>: {{ object.instructor }}</p>
+    <p><strong>Length</strong>: {{ object.duration }} weeks</p>
     <p><img src="{{ object.courseArt.url }}" style="max-height:200px; max-width:600px"/></p>
 {% endblock %}
