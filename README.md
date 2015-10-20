@@ -1,6 +1,6 @@
 # django-course-catalog
 ## Objective
-The goal of this project is to present my current skill level with both Python and Django.
+The goal of this project is to demonstrate my current skill level with both Python and Django.
 
 ## Instructions
 This Django project was built using Python3.
