@@ -11,4 +11,4 @@ pip3 install -r requirements.txt
 python3 manage.py runserver
 ```
 
-Next, open your web browser and enter http://127.0.0.1:8000/ in your browser to access the site.
+Next, open your web browser and go to http://127.0.0.1:8000/ to access the site.
